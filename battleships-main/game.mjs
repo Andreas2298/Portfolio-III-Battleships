@@ -116,5 +116,15 @@ function buildMenu() {
     },
   ];
 }
+function selectLanguage(callback) {
+  clearScreen();
 
+  console.log("Select language:\n");
+  console.log("1. English\n");
+  console.log("2. Norsk\n");
+
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  });
 
