@@ -2,7 +2,7 @@ const DICTIONARY = {
 
 const DICTIONARY = {
   en: {
-    startgame: "Start game",
+    startGame: "Start game",
 
     exitGame: "Exit the game",
 
