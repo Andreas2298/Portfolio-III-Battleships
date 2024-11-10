@@ -16,6 +16,21 @@ function checkBoardRes() {
   return { width, height };
 }
 
+if (width < 110) {
+  throw new Error(
+    "Terminal must be wider than 110px. " +
+      "It is now only " +
+      width +
+      "px wide"
+  );
+} else if (height < 28) {
+  throw new Error(
+    "Terminal must be higher than 28px. " +
+      "It is now only " +
+      height +
+      "px high"
+  );
+}
 
 const MAIN_MENU_ITEMS = buildMenu();
 
