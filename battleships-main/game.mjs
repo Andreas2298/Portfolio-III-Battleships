@@ -7,6 +7,16 @@ import createMapLayoutScreen from "./game/mapLayoutScreen.mjs";
 import createInnBetweenScreen from "./game/innbetweenScreen.mjs";
 import createBattleshipScreen from "./game/battleshipsScreen.mjs";
 
+const { width, height } = checkBoardRes();
+
+function checkBoardRes() {
+  const width = process.stdout.columns;
+  const height = process.stdout.rows;
+
+  return { width, height };
+}
+
+
 const MAIN_MENU_ITEMS = buildMenu();
 
 const GAME_FPS = 1000 / 60; // The theoretical refresh rate of our game engine
