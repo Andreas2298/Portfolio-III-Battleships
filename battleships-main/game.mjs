@@ -128,3 +128,24 @@ function selectLanguage(callback) {
     output: process.stdout,
   });
 
+ rl.question("Enter your choice here:", (selectedLanguage) => {
+    if (selectedLanguage === "1") {
+      language = "en";
+    } else if (selectedLanguage === "2") {
+      language = "no";
+    } else {
+      console.log("Invalid Choice");
+      language = "en";
+    }
+
+    console.log(
+      `The language is set to: ${translate("Preferred_language")})\n`
+    );
+    rl.close();
+    if (callback) {
+      callback(language);
+    }
+  });
+}
+  
+
