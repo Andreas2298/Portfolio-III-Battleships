@@ -6,6 +6,7 @@ import createMenu from "./utils/menu.mjs";
 import createMapLayoutScreen from "./game/mapLayoutScreen.mjs";
 import createInnBetweenScreen from "./game/innbetweenScreen.mjs";
 import createBattleshipScreen from "./game/battleshipsScreen.mjs";
+import DICTIONARY from "./game/Language.mjs";
 
 const { width, height } = checkBoardRes();
 
