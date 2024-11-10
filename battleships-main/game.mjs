@@ -89,10 +89,32 @@ function buildMenu() {
                 }, 3);
                 currentState.next = innbetween;
                 currentState.transitionTo = "Map layout";
-            }
+            },
         },
-        { text: "Exit Game", id: menuItemCount++, action: function () { print(ANSI.SHOW_CURSOR); clearScreen(); process.exit(); } },
-    ];
+        { 
+        
+        text: "Exit Game", 
+         id: menuItemCount++, 
+         action: function () { 
+         print(ANSI.SHOW_CURSOR); 
+         clearScreen(); 
+         process.exit(); 
+      
+      }, 
+        },
+     
+      {
+    text: "Select your preferred language",
+      id: menuItemCount++,
+      action: function () {
+        print(ANSI.SHOW_CURSOR);
+        selectLanguage(function (selectedLanguage) {
+          language = selectedLanguage;
+          console.log(`Language is: ${language}`);
+     });
+      },
+    },
+  ];
 }
 
 
